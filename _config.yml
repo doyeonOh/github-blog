@@ -7,7 +7,7 @@ title: Dongjun's Blog
 subtitle: Dongjun's Blog
 description: Dongjun's IT Blog
 author: Dongjun Kwon
-language: ko
+language: en
 timezone: Asia/Seoul
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
