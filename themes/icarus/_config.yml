@@ -15,31 +15,30 @@ customize:
         url: images/logo.png
     profile:
         enabled: true # Whether to show profile bar
-        avatar: css/images/avatar.png
+        avatar: https://avatars.githubusercontent.com/u/4123095?v=3
         gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-        author: PPOffice
-        author_title: Web Developer & Designer
-        location: Harbin, China
-        follow: https://github.com/ppoffice/
+        author: 권동준
+        author_title: Web Developer
+        location: Seoul, Korea
+        follow: https://github.com/mayajuni
     highlight: monokai
-    sidebar: right # sidebar position, options: left, right
+    sidebar: left # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
     favicon: # path to favicon
     social_links:
         github: http://github.com/ppoffice/hexo-theme-icarus
-        #twitter: /
-        facebook: /
+        #twitter: /        facebook: /
         #dribbble: /
-        #rss: /
+        rss: /
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 
 # Widgets
 widgets:
-    - recent_posts
     - category
     - archive
     - tag
     - tagcloud
+    - recent_posts
     - links
 
 # Search
