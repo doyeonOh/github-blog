@@ -18,11 +18,11 @@ childProcess.exec("hexo g -d", (err, stdout, e) => {
             if(err) console.error(errp);
             console.log(`2. git addp
             ${stdout}`);
-            childProcess.exec(`git commit -m "update"`, (err) => {
+            childProcess.exec(`git commit -m "update"`, (err, stdout) => {
                 if(err) console.error(err);
                 console.log(`3. git commit
                 ${stdout}`);
-                childProcess.exec(`git push`, (err) => {
+                childProcess.exec(`git push`, (err, stdout) => {
                     if(err) console.error(err);
                     console.log(`4. git push
                     ${stdout}`);
