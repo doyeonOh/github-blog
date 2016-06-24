@@ -12,7 +12,7 @@ timezone: Asia/Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: mayajuni.github.io
+url: https://mayajuni.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -71,3 +71,13 @@ deploy:
   type: git
   repo: https://github.com/mayajuni/mayajuni.github.io
   branch: master
+
+# sitemap auto generator
+sitemap:
+    path: sitemap.xml
+
+feed:
+    type: atom # atom 또는 rss2 중에 하나를 선택합니다.
+    path: feed.xml # 해당 경로에 xml 파일을 생성합니다.
+    limit: false # 포스트 몇개까지 추가할 것인지 설정합니다. 숫자를 입력할 수 있고 0 또는 false 를 입력하면 모든 포스트를 추가합니다.
+    hub:

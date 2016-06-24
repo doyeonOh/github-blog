@@ -15,18 +15,43 @@
 .profile-block
     padding: 15px 20px
     border-bottom: 1px solid color-border
-    &:last-child
-        border-bottom: none
+    /*&:last-child
+        border-bottom: none*/
 
 #profile
-    column(profile-column)
-    display: none
+    transition: all .1s ease-in-out;
+    width: 270px;
+    top: 64px
+    z-index: 999
+    position: fixed
+    height: 100
+    right: 0
+    margin: 0
+    background-color: #fff
+    box-shadow: 0 1px 4px rgba(0,0,0,.3)
+    -webkit-transform: translateX(100%)!important
+    -moz-transform: translateX(100%)!important
+    -o-transform: translateX(100%)!important
+    -ms-transform: translateX(100%)!important
+    opacity: 0
     @media mq-normal
-        display: block
+        column(profile-column)
+        position: relative
+        display: inline
+        float: left
+        top: 0px
+        opacity: 1
+        margin-top: 40px;
+        box-shadow: none
+        -webkit-transform: translateX(0%)!important
+        -moz-transform: translateX(0%)!important
+        -o-transform: translateX(0%)!important
+        -ms-transform: translateX(0%)!important
     .inner
         @extend $block
         margin-top: block-margin
         background: white
+        margin-top: 0
         .base-info
             #avatar
                 display: block
@@ -69,6 +94,10 @@
                 text-align: center
                 box-sizing: border-box
                 font-size: font-size + 6px
+                a
+                    color: #565a5f
+                    &:hover
+                        color: #38b7ea
                 span
                     display: block
                     font-size: font-size
@@ -114,24 +143,15 @@
                                 position: absolute
                                 z-index: 2
     &.card
-        top: 50px
-        right: 20px
-        z-index: 999
-        display: block
-        min-width: 280px
-        position: absolute
+        -webkit-transform: translateX(0)!important
+        -moz-transform: translateX(0)!important
+        -o-transform: translateX(0)!important
+        -ms-transform: translateX(0)!important
+        opacity: 1
+        height: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
         .profile-inner
             position: relative
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
-            &:before, &:after
-                z-index: 1
-                content: ''
-                top: -20px
-                right: 10px
-                position: absolute
-                border-width: 10px
-                border-style: solid
-                border-color: transparent transparent white transparent
-            &:after
-                z-index: 0
-                border-color: transparent transparent color-border - #111 transparent
+        .inner
+            margin-top: 0

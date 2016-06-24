@@ -20,15 +20,17 @@
     %>
     <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <%- open_graph({
-        image:          thumbnail(page),
+    <%-
+    open_graph({
+        image:          thumbnail(page) ? thumbnail(page) : 'css/images/main.jpg',
         fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
         fb_admins:      theme.miscellaneous.open_graph.fb_admins,
         twitter_id:     theme.miscellaneous.open_graph.twitter_id,
         google_plus:    theme.miscellaneous.open_graph.google_plus,
-    }) %>
+    });
+    %>
     <%- meta(page) %>
-
+    <%- autoCanonical(config, page) %>
     <% if (theme.rss) { %>
         <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml" />
     <% } %>

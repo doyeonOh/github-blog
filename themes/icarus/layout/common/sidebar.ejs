@@ -11,12 +11,16 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                <div id="repos"></div>
-                <span>REPOS</span>
+                <a href="https://github.com/mayajuni?tab=repositories">
+                    <div id="repos"></div>
+                    <span>REPOS</span>
+                </a>
             </div>
             <div class="article-info-block">
-                <div id="followers"></div>
-                <span>FOLLOWERS</span>
+                <a href="https://github.com/mayajuni/followers">
+                    <div id="followers"></div>
+                    <span>FOLLOWERS</span>
+                </a>
             </div>
         </div>
         <% if(theme.customize.social_links) { %>
@@ -47,31 +51,14 @@
         </div>-->
     </div>
 
-    <div id="sidebar">
+    <div id="sidebar" class="sidebar">
         <% theme.widgets.forEach(function(widget) { %>
         <%- partial('widget/' + widget) %>
         <% }) %>
-        <div id="toTop" class="fa fa-angle-up"></div>
+        <!--<div id="toTop" class="fa fa-angle-up"></div>-->
     </div>
 </aside>
 <script>
-    function store(key, value) {
-        try {
-            if (window.localStorage) {
-                if (value) {
-                    value._timestamp = new Date().valueOf();
-                    localStorage[key] = JSON.stringify(value);
-                } else {
-                    var ret = localStorage[key];
-                    if (ret) {
-                        return JSON.parse(ret);
-                    }
-                    return null;
-                }
-            }
-        } catch(e) {}
-    }
-
     function escape(text) {
         return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
