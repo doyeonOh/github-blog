@@ -93,6 +93,7 @@ typings install dt~mine --save --global
     "express": "registry:dt/express#4.0.0+20160317120654",
     "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160625155614",
     "node": "registry:env/node#6.0.0+20160622202520",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
     "serve-static": "registry:dt/serve-static#0.0.0+20160606155157"
   }
 }
