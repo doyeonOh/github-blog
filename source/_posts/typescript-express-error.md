@@ -89,7 +89,7 @@ const wrap = fn => (req, res, next) => fn(req, res, next).catch(next);
 ```bash
 app.get('/', wrap(async (req, res, next) => {
     let data = await callback();
-    let 로직1 = await 로직1();
+    let data2 = await 로직1();
     /* 리턴 값이 없음 아래와 같이 써도 된다. */
     await 로직2();
 }))
@@ -102,7 +102,7 @@ app.use((err, req, res, next) => {
 > 여기에도 유의점이 있다. 이것을 사용하기 위해서는 return promise 이어야된다. 단순 callback에 대한 처리를 할 수 없다. 하지만 많은 모듈 혹은 미들웨어가 promise를 제공(?)하기 때문에 사용하기에는 불편함이 없다.(기존 로직은 async/await로 처리하면되며, mongoose나 mysql 같은경우 이미  promise를 사용 할 수 있어 큰 불편이 없다.)
 
 ## 결론
-직접 이렇게 하고 사용을 하면 생산성이 확실히 빨라진다. 코드도 짧아지고 가독성도 좋아 진다. 이렇게 한번 쓰기 시작하면서 모든 노드 프로젝트는 이 방식으로 개발하고 있다. 나는 이 방식(방법)을 추천한다.
+직접 이렇게 하고 사용을 하면 생산성이 확실히 빨라진다. 코드도 짧아지고 가독성도 좋아 진다. 이렇게 한번 쓰기 시작하면서 모든 노드 프로젝트는 이 방식으로 개발하고 있다. 필자는 이 방식(방법)을 추천한다.
 
 
 ##### 참고
