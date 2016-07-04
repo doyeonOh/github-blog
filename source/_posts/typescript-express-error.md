@@ -47,7 +47,7 @@ app.use((err, req, res, next) => {
     (이거 의외로 되게 유지보수하기 힘들고, 귀찮은 작업이다. 깜빡 한번하면 그냥 죽어버린다.)
  * 내가 Error 처리를 하지 못하는 부분에서는 Error처리를 할 수 없다.(모듈 안에서 에러가 났던가, 기타 등등)
 
-> 위와 같은 문제 때문에 나 같은경우 [node-domain-middleware](https://github.com/brianc/node-domain-middleware) 미들웨어를 사용하여 에러처리를 했다.(의외로 편하고 좋았다.) 하지만 [expressJs의 성능우수 사례](http://expressjs.com/ko/advanced/best-practice-performance.html#section-8)를 보면 도메인 사용을 권장하지 않고 더이상 사용되지 않는 모듈이라고 되어 있다.
+> 위와 같은 문제 때문에 필자는 [node-domain-middleware](https://github.com/brianc/node-domain-middleware) 미들웨어를 사용하여 에러처리를 했다.(편하고 좋았다.) 하지만 [expressJs의 성능우수 사례](http://expressjs.com/ko/advanced/best-practice-performance.html#section-8)를 보면 도메인 사용을 권장하지 않고 더이상 사용되지 않는 모듈이라고 되어 있다.
 
 ## 프로미스를 이용한 에러 처리
 es2015에 있는 [Promise](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 이용하여 Error 처리 하는 방식이다.
@@ -67,7 +67,7 @@ app.use((err, req, res, next) => {
 })
 ```
 위와 같이 하면 catch를 통해 promise로 처리하는 부분의 모든 error를 처리 할 수 있다. 위에 단점으로 적었던 2가지 전부를 해결 할 수 있다. 나의 생각 일 수 있지만 코드도 좀더 간결해 보인다(아닐수도 있다.)
-하지만 여기서 욕심을 좀더 내에서 한번더 코드를 좀더 간결하게 보이게 해보도록 하겠다. es7 스팩인 async/await를 이용할 것이다.
+하지만 여기서 코드를 좀더 간결하게 해보도록 하겠다. es7 스팩인 async/await를 이용할 것이다.
 
 ### async/await 이용한 에러 처리
  async/await가 다소 생소 할 수 있다. 비동기 코드를 동기화 간편하게 해주는 것이다. es7에 제안된 스팩이며, 자세한 내용은 [이곳](https://blogs.msdn.microsoft.com/typescript/2015/11/03/what-about-asyncawait/)을 보자. 구글 검색해도 많이 나온다.
@@ -85,7 +85,7 @@ const wrap = fn => (...args) => fn(...args).catch(args[2]);
 ```bash
 const wrap = fn => (req, res, next) => fn(req, res, next).catch(next);
 ```
- 2. 이제 router 안의 로직을 wrap 한다.
+ 2. 만든 wrap을 아래와 같이 한다.
 ```bash
 app.get('/', wrap(async (req, res, next) => {
     let data = await callback();
