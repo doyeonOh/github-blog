@@ -2,7 +2,7 @@
 title: Typescript + ExpressJs 시작하기
 date: 2016-06-30 09:07:02
 tags: [typescript, nodejs, expressjs]
-categories: [Typescript]
+categories: [Typescript, express]
 ---
 ![](typescript-express-nodejs.jpg)
 
