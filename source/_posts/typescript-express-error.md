@@ -6,7 +6,7 @@ categories: [Typescript, express]
 ---
 저번 포스트에서는 서버 구동에 대해서 포스팅했다. 이번에는 Error 처리에 대해 포스팅 하겠다.
 
-## 동기 에러처리
+## 기본적인 에러처리
 ```bash
 app.get('/', (req, res) => {
     throw new Error('에러 발생')
@@ -49,7 +49,7 @@ app.use((err, req, res, next) => {
 
 > 위와 같은 문제 때문에 나 같은경우 [node-domain-middleware](https://github.com/brianc/node-domain-middleware) 미들웨어를 사용하여 에러처리를 했다.(의외로 편하고 좋았다.) 하지만 [expressJs의 성능우수 사례](http://expressjs.com/ko/advanced/best-practice-performance.html#section-8)를 보면 도메인 사용을 권장하지 않고 더이상 사용되지 않는 모듈이라고 되어 있다.
 
-## 비동기 에러 처리
+## 프로미스를 이용한 에러 처리
 es2015에 있는 [Promise](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 이용하여 Error 처리 하는 방식이다.
 ```bash
 app.get('/', (req, res, next) => {
