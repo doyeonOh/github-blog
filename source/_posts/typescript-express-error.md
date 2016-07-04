@@ -1,8 +1,8 @@
 ---
-title: Typescript + ExpressJs Error
+title: ExpressJs Error 에러처리
 date: 2016-07-04 09:25:35
-tags: [typescript, nodejs, expressjs, router]
-categories: [Typescript, express]
+tags: [expressjs, router]
+categories: [ExpressJs]
 ---
 저번 포스트에서는 서버 구동에 대해서 포스팅했다. 이번에는 Error 처리에 대해 포스팅 하겠다.
 
