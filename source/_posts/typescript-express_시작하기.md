@@ -75,13 +75,13 @@ typings install dt~express --save --global
 ```
 위의 문법은 [Typings](https://github.com/typings/typings)에 가면 설명나와 있다.
 
-> 아마 위에 2개만 설치하고 타입스크립트 컴파일을 하면 에러가 떨어질 것이다. 이유는 express 정의 파일안에 serve-static, express-serve-static-core 파일을 import 하는 부분이 있다. 또 serve-static 안에 mine라는 정의를 임포트 하기 때문에 같이 설치한다.
+> 아마 위에 2개만 설치하고 타입스크립트 컴파일을 하면 에러가 떨어질 것이다. 이유는 express 정의 파일안에 serve-static, express-serve-static-core 파일을 import 하는 부분이 있다. 또 serve-static 안에 mime라는 정의를 임포트 하기 때문에 같이 설치한다.
 
 
 ```bash
 typings install dt~serve-static --save --global
 typings install dt~express-serve-static-core --save --global
-typings install dt~mine --save --global
+typings install dt~mime --save --global
 ```
 
 설치가 완료 되면 typings.json을 보면 아래와 같이 되어 있다.
