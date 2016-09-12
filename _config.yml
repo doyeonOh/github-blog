@@ -69,7 +69,7 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/doyeonOh/odyody12.github.io
+  repo: https://github.com/doyeonOh/doyeonoh.github.io
   #branch: master
 
 # sitemap auto generator
