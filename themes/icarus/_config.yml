@@ -12,24 +12,24 @@ customize:
         enabled: true
         width: 40
         height: 40
-        url: images/logo.png
+        url: images/twelve.png
     profile:
         enabled: true # Whether to show profile bar
-        avatar: https://avatars.githubusercontent.com/u/4123095?v=3
+        avatar: https://avatars3.githubusercontent.com/u/4124275?v=3&u=f586395eafd04b466570ac27ffe036862dbae0d6&s=140
         gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-        author: 권동준
+        author: 오도연
         author_title: Web Developer
         location: Seoul, Korea
-        follow: https://github.com/mayajuni
+        follow: https://github.com/doyeonOh
     highlight: androidstudio
     sidebar: left # sidebar position, options: left, right
     thumbnail: false # enable posts thumbnail, options: true, false
     favicon: css/images/favicon.ico# path to favicon
     social_links:
-        github: http://github.com/mayajuni
+        github: http://github.com/doyeonOh
         #twitter: /        facebook: /
         #dribbble: /
-        facebook: https://www.facebook.com/dongjun.kwon.39
+        facebook: https://www.facebook.com/odyody12
         rss: /feed.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 
@@ -50,7 +50,7 @@ search:
 
 # Comment
 comment:
-    disqus: mayajuni
+    disqus: odyody12
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
 
@@ -70,6 +70,6 @@ miscellaneous:
         fb_app_id:
         fb_admins: 100000731937646
         twitter_id:
-        google_plus: mayajuni10@gmail.com
+        google_plus: odyody12@gmail.com
     links:
         #Hexo: http://hexo.io

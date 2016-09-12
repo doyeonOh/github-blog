@@ -11,13 +11,13 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                <a href="https://github.com/mayajuni?tab=repositories">
+                <a href="<%= profile.follow %>?tab=repositories">
                     <div id="repos"></div>
                     <span>REPOS</span>
                 </a>
             </div>
             <div class="article-info-block">
-                <a href="https://github.com/mayajuni/followers">
+                <a href="<%= profile.follow %>/followers">
                     <div id="followers"></div>
                     <span>FOLLOWERS</span>
                 </a>
@@ -72,7 +72,7 @@
         return num.toFixed(1) + 'k';
     }
 
-    var url = 'https://api.github.com/users/mayajuni';
+    var url = 'https://api.github.com/users/doyeonOh';
 
 
     $.get(url, function(data) {

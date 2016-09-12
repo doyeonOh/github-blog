@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Dongjun's Blog
-subtitle: Dongjun's Blog
-description: Dongjun's IT Blog
-author: Dongjun Kwon
+title: Doyeon's Blog
+subtitle: Doyeon's Blog
+description: Doyeon's IT Blog
+author: Doyeon Oh
 language: en
 timezone: Asia/Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://mayajuni.github.io
+url: https://doyeonOh.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -69,7 +69,7 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/mayajuni/mayajuni.github.io
+  repo: https://github.com/doyeonOh/odyody12.github.io
   #branch: master
 
 # sitemap auto generator
