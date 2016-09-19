@@ -60,7 +60,7 @@ share: default # options: jiathis, bdshare, addtoany, default
 # Plugins
 plugins:
     fancybox: true
-    google_analytics: UA-79741974-1
+    google_analytics: UA-84397130-1
     google_site_verification: # enter Google site verification code
     baidu_analytics: # enter Baidu Analytics hash key
 
