@@ -21,7 +21,7 @@ customize:
         author_title: Web Developer
         location: Seoul, Korea
         follow: https://github.com/doyeonOh
-    highlight: androidstudio
+    highlight: arta
     sidebar: left # sidebar position, options: left, right
     thumbnail: false # enable posts thumbnail, options: true, false
     favicon: css/images/favicon.ico# path to favicon

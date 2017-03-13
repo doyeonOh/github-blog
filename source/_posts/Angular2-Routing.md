@@ -38,7 +38,7 @@ Angular2 에서 라우팅 설정에 사용되는 메인 컴포넌트 3개가 있
 
 그 전에 일단 Angular2 의 router 사용하려면 `@angular/router` 패키지로부터 다음과 같이 import 해야 한다.
 
-```
+```typescript
 import {
 	RouterModule,
     Routes
@@ -52,9 +52,9 @@ import {
 
 뭔 소린지 모르니 다음 코드를 보자.
 
-```
+```typescript
 const routes: Routes = [
-    { path: '', redirectTo: home', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
@@ -78,7 +78,7 @@ const routes: Routes = [
 1. `RouterModule` 을 import 한다.
 2. `NgModule` 의 imports 안에 `RouterModule.forRoot(routes)` 를 사용하여 routes 를 적용한다.
 
-```
+```typescript
 ...
 import {
 	RouterModule,
@@ -122,7 +122,7 @@ platformBrowserDynamic().bootstrapModule(RoutesAppModule)
 
 사용 할 때는 해당 component 에 연결된 template 에서 `router-outlet` 디렉티브를 사용한다. 
 
-```
+```typescript
 @Component({
   selector: 'router-app',
   template: `
@@ -153,7 +153,7 @@ routerLink 는 바로 다음에 설명하겠지만,
 
 근데 왜 이걸 써야 할까? 알다시피 다음과 같이 직접적으로 HTML에 링크를 시도할 수 있지 않은가?
 
-```
+```typescript
 <a href="/#/home">Home</a>
 ```
 
@@ -165,7 +165,7 @@ Angular2 에서 이 문제를 해결한 것이 `RouterLink` 이다. 이것을 �
 
 위에도 나와 있지만 이 directive 는 다음과 같이 특별한 문법으로 link 를 작성 할 수 있다.
 
-```
+```typescript
  <a>Navigation:</a>
   <ul>
     <li><a [routerLink]="['home']">Home</a></li>
@@ -189,7 +189,7 @@ Angular2 에서 이 문제를 해결한 것이 `RouterLink` 이다. 이것을 �
 
 다음 코드 `index.html` 파일을 보자.
 
-```
+```typescript
 <!doctype html>
 <html>
   <head>
@@ -217,7 +217,7 @@ Angular2 에서 이 문제를 해결한 것이 `RouterLink` 이다. 이것을 �
 
 다음 코드는 그 예제이다.
 
-```
+```typescript
 const routes: Routes = [
     { path: 'app', component: AppComponent }
   ];
@@ -234,7 +234,7 @@ const routes: Routes = [
 })
 export class AppModule { }
 ```
-```
+```typescript
 <!doctype html>
 <html>
   <head>
@@ -254,7 +254,7 @@ base 태그가 /app 로 되있기 때문에 routes 경로도 app 으로 지정�
 
 그것은 바로 `NgModule` 의 `APP_BASE_HREF` 를 제공하면 된다!
 
-```
+```typescript
 @NgModule({
   declarations: [ RoutesDemoApp ],
   imports: [
@@ -292,7 +292,7 @@ HTML5 Routing 을 사용하는 경우, 보통 경로들과 다르지 않기 때�
 
 일단 `LocationStrategy` 와 `HashLocationStrategy` 를 import 해야 한다.
 
-```
+```typescript
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 ```
 
@@ -300,7 +300,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 이제 이 클래스들을 `NgModule` 에 작성하자.
 
-```
+```typescript
 	...
 	providers: [
     	{ provide: LocationStrategy, useClass: HashLocationStrategy }
@@ -310,4 +310,3 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 ```
 
 이렇게 하면 적용된다. 그외 전략은 공식 문서를 참고하자..
-
