@@ -3,11 +3,21 @@ author: Doyeon Oh
 tags:
   - angular2
   - routing
+  - angular
 categories:
-  - angular2
+  - angular
+  - ''
 date: 2016-12-10 15:00:00
 ---
+제가 알고 있거나 공부하고 있는 주제에 대하여 포스팅 할 계획을 갖고 있습니다. 
+
+글 쓰는 데에는 재주가 없지만 지속적으로 업데이트 할 예정입니다.
+
+부족한 점이 있다면 댓글을 남겨주세요.
+
+
 # Angular2 Routing
+
 
 #### 1. Routing ?
 
@@ -17,7 +27,7 @@ date: 2016-12-10 15:00:00
 
 모두 알다시피 / 경로로 방문하면 어플리케이션의 홈 라우트를 방문하길 원할 것이고, /about 페이지로 방문하면 about page 로 렌더링하기 원할 것이다.
 
-그렇다면 왜 라우팅을 해야하는지 알아보자면 
+즉, 라우팅을 하는 이유를 추려보자면
 
 - app 안에서 서로 다른 영역을 구분 할 수 있다.
 - app 안에서 상태를 유지한다.
@@ -48,7 +58,7 @@ import {
 
 ##### 2-1. Routes
 
-어플리케이션의 라우트를 정의하려면 이놈이 필요하다. 이놈 즉, `Routes` 설정을 생성하고 우리 어플리케이션에 적용하기 위해 `router` 를 사용하는데 필요한 의존들과 함께 `RouterModule.forRoot(routes)` 사용해야 한다.
+어플리케이션의 라우트를 정의하려면 이 놈이 필요하다. 즉, 라우터를 사용하는데 필요한 의존들을 설정한 `Routes`  를 생성하고 적용하기 위해  `RouterModule.forRoot(routes)`  처럼 세팅해야 한다.
 
 뭔 소린지 모르니 다음 코드를 보자.
 
@@ -71,7 +81,7 @@ const routes: Routes = [
 - 그 외에도 등등 이 있으니 공식 문서 참고.
 
 
-자 이 routes 를 만들었으니 어플리케이션에 적용을 해야한다.
+자 이 routes 를 만들었으니 어플리케이션에 적용을 해보자.
 
 `Routes` 를 적용하자
 
@@ -118,9 +128,9 @@ platformBrowserDynamic().bootstrapModule(RoutesAppModule)
 
 라우트를 변경할 때 외부 layout 은 냅두고 내부만 바꾸고 싶을 때가 있다. 그럴 때 사용하는 것이 RouterOutlet 이다.
 
-이미 `NgModule` 에서 `RouterModule` 을 import 했기 때문에 해당 모듈에 Declarations 된 모든 component 들은 해당 모듈에 포함된 RouterOutlet 을 사용 할 수 있다. 
+이미 `NgModule` 에서 `RouterModule` 을 import 했기 때문에 해당 모듈에 선언된(declearations) 모든 컴포넌트들은 해당 모듈에 포함된 `RouterOutlet` 을 사용 할 수 있다. 
 
-사용 할 때는 해당 component 에 연결된 template 에서 `router-outlet` 디렉티브를 사용한다. 
+사용 할 때는 해당 컴포넌트에 연결된 template 에서 `router-outlet` 디렉티브를 사용한다. 
 
 ```typescript
 @Component({
@@ -310,3 +320,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 ```
 
 이렇게 하면 적용된다. 그외 전략은 공식 문서를 참고하자..
+
+
+[참조] : ng-book2 : The Complete Book on AngularJS 2

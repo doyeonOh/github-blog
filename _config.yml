@@ -39,13 +39,13 @@ relative_link: false
 future: true
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
-  theme: 'tomorrow'
+  theme: 'okaidia'
   line_number: true    # default false
-highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
-  tab_replace:
+# highlight:
+#   enable: false
+#   line_number: true
+#   auto_detect: false
+#   tab_replace:
 
 # Category & Tag
 default_category: uncategorized
